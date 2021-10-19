@@ -1,0 +1,42 @@
+.single-doctor h5{
+    color: #9ea9b3;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+.single-doctor h2{
+font-size: 39px;
+columns: #232323;
+text-transform: capitalize;
+font-weight: 700;
+}
+.doctor-image{
+z-index: 1;
+}
+.book-button {
+    position: relative;
+    bottom: 28px;
+}
+.doctor-info {
+    font-family: 'Rubik', sans-serif;
+    padding: 10px 20px;
+    bottom: 20px;
+    width: 93%;
+    margin: auto;
+    border-bottom: 0;
+    border-radius: 7px;
+    box-shadow: 0 0 16px 0 rgb(0 0 0 / 7%);
+    z-index: 99;
+    background-color: #fff;
+    position: relative;
+}
+.doctor-info h4{
+    font-size: 20px;
+    color: #282828;
+    font-weight: 700;
+}
+.doctor-info p{
+    font-size: 16px;
+    color: #616161;
+}

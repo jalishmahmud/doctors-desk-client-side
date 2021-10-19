@@ -1,0 +1,14 @@
+{
+    "id": 2,
+    "name": "Dr. M.A. Baqui",
+    "img": "https://i.ibb.co/YtzYh5N/doctor-2-1.jpg",
+    "designation": "Professor, Cardiology",
+    "hospitalName": "National Institute of Cardiovascular Diseases (NICVD)",
+    "degree": "MBBS, D-Card(DU), FACC(America)",
+    "workingAddress": "Imperial Ornate, Flat A-3, 21/6 Khilzi Road, Mohammdpur, Dhaka-1207.",
+    "visitTime": "2:00 pm - 6:30 pm",
+    "consultationFee": "700 TK",
+    "email": "baqui@doctordesk.com",
+    "phone": 2834567,
+    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos itaque, dolore enim dolorum, harum voluptates et soluta quia voluptas labore placeat necessitatibus eum iure quaerat laudantium provident deserunt veniam ullam."
+}

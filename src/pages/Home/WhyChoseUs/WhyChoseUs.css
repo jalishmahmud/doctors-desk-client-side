@@ -1,0 +1,34 @@
+.single-why-chose-us{
+    font-family: 'Merriweather', serif;
+}
+.single-why-chose-us h3 {
+color: #232323;
+font-size: 20px;
+font-weight: 700;
+}
+.single-why-chose-us h5{
+color: #DC3545;
+font-size: 15px;
+font-weight: 400;
+text-transform: uppercase;
+}
+.single-why-chose-us p{
+color: #919191;
+font-size: 16px;
+line-height: 24px;
+font-weight: 400;
+}
+.single-why-chose-us a{
+font-size: 16px;
+font-weight: 500;
+color: #919191;
+text-decoration: none;
+}
+.custom-icon {
+    display: inline-block;
+    font-size: 30px;
+    background-color: #f4f7fc;
+    color: #DC3545;
+    padding: 20px 24px;
+    border-radius: 100%;
+}

@@ -1,6 +1,7 @@
 
 import useAuth from '../../../hooks/useAuth';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import { useHistory, useLocation } from 'react-router';
 
 
 const Login = () => {
@@ -8,7 +9,6 @@ const Login = () => {
         signInUsingGoogle,
         error,
         isChecked,
-        getUserName,
         getUserEmail,
         getUserPassword,
         registerUsingEmailPassword,
@@ -16,21 +16,24 @@ const Login = () => {
         handleSignInSignUpToggle
     } = useAuth();
 
+    const location = useLocation();
+    const history = useHistory();
+    const redirect_uri = location.state?.from || '/appointment';
+    const handleGoogleSignIn = () => {
+        signInUsingGoogle()
+            .then(result => {
+                history.push(redirect_uri)
+            });
+    };
     return (
         <div>
             <Container>
-                <Row className="mt-3 pt-5">
-                    <Col></Col>
+                <Row xs={1} md={3} className="mt-3 pt-5 p-4">
+                    <Col xs={1}></Col>
                     <Col className="border border-danger rounded p-4 ">
-                        <h3 className="border-bottom pb-3 mb-3">{isChecked ? 'Register' : 'Log in'}</h3>
+                        <h3 classNasme="border-bottom pb-3 mb-3">{isChecked ? 'Register' : 'Log in'}</h3>
                         <Form onSubmit={isChecked ? registerUsingEmailPassword : signInUsingEmailPassword
                         }>
-                            {isChecked &&
-                                <Form.Group className="mb-3" controlId="formBasicName">
-                                    <Form.Label>Your Name</Form.Label>
-                                    <Form.Control onBlur={getUserName} type="name" placeholder="Enter name" />
-                                </Form.Group>}
-
                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <Form.Label>Email address</Form.Label>
                                 <Form.Control onBlur={getUserEmail} type="email" placeholder="Enter email" />
@@ -55,9 +58,9 @@ const Login = () => {
                             }
                         </Form>
                         <div>-------------or-----------</div>
-                        <Button onClick={signInUsingGoogle} variant="danger">Google Sign In</Button>
+                        <Button onClick={handleGoogleSignIn} variant="danger">Google Sign In</Button>
                     </Col>
-                    <Col></Col>
+                    <Col xs={1}></Col>
                 </Row>
             </Container>
 

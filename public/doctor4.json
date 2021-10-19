@@ -1,0 +1,14 @@
+{
+    "id": 4,
+    "name": "Prof. Mohammad Ali",
+    "img": "https://i.ibb.co/bRN26yd/doctor-4-1.jpg",
+    "designation": "Professor, Neurologist",
+    "hospitalName": "BIRDEM General Hospital & Ibrahim Medical College",
+    "degree": "MBBS, FCPS, FRCS Ed FACS",
+    "workingAddress": "BIRDEM General Hospital & Ibrahim Medical College SHAHBAG, DHAKA",
+    "visitTime": "3:00 pm - 8:30 pm",
+    "consultationFee": "600 TK",
+    "email": "ali@doctordesk.com",
+    "phone": 2894567,
+    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos itaque, dolore enim dolorum, harum voluptates et soluta quia voluptas labore placeat necessitatibus eum iure quaerat laudantium provident deserunt veniam ullam."
+}

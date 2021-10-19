@@ -10,6 +10,10 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import NotFound from './pages/NotFound/NotFound';
 import Contact from './pages/Contact/Contact/Contact';
 import AuthProvider from './context/AuthProvider';
+import DoctorDetail from './pages/Home/DoctorDetail/DoctorDetail';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
+import Appointment from './pages/Appointment/Appointment';
+import Footer from './pages/Shared/Footer/Footer';
 
 function App() {
   return (
@@ -21,8 +25,14 @@ function App() {
             <Route exact path="/">
               <Home></Home>
             </Route>
-            <Route exact path="/home">
+            <Route path="/home">
               <Home></Home>
+            </Route>
+            <PrivateRoute path="/appointment">
+              <Appointment></Appointment>
+            </PrivateRoute>
+            <Route path="/doctor/:doctorId">
+              <DoctorDetail></DoctorDetail>
             </Route>
             <Route path="/about">
               <About></About>
@@ -40,6 +50,7 @@ function App() {
               <NotFound></NotFound>
             </Route>
           </Switch>
+          <Footer></Footer>
         </Router>
       </AuthProvider>
 

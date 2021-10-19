@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "name": "Professor Mohammed Hanif",
+        "name": "Prof. Mohammed Hanif",
         "img": "https://i.ibb.co/7S1crbk/doctor-1-1.jpg",
         "designation": "Professor, Neurologist",
         "hospitalName": "Dhaka Shishu Hospital (DSH)",
@@ -29,7 +29,7 @@
     },
     {
         "id": 3,
-        "name": "Prof . Dr. Golam Muin Uddin",
+        "name": "Dr. Golam Muin Uddin",
         "img": "https://i.ibb.co/R9Qc9Ch/doctor-3-1.jpg",
         "designation": "Professor, Paediatrics",
         "hospitalName": "Bangabandhu Sheikh Mujib Medical University",

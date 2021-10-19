@@ -1,0 +1,14 @@
+{
+    "id": 5,
+    "name": "Prof. Dr. MA Salam",
+    "img": "https://i.ibb.co/XJ2NMkt/doctor-5-1.jpg",
+    "designation": "Professor, Psychiatry",
+    "hospitalName": "Dhaka Shishu Hospital (DSH)",
+    "degree": "MBBS, MCPS, DPM",
+    "workingAddress": "Dhaka Shishu Hospital, Shishu mela, Sher-e Bangla Nagar, DHaka.",
+    "visitTime": "9:00 pm - 11:00 pm",
+    "consultationFee": "550 TK",
+    "email": "absalam@doctordesk.com",
+    "phone": 2896125,
+    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos itaque, dolore enim dolorum, harum voluptates et soluta quia voluptas labore placeat necessitatibus eum iure quaerat laudantium provident deserunt veniam ullam."
+}

@@ -1,0 +1,14 @@
+{
+    "id": 6,
+    "name": "Dr. Mahbubul Islam",
+    "img": "https://i.ibb.co/0JJtFP8/doctor-6-1.jpg",
+    "designation": "Assistant Professor, Chest Diseases",
+    "hospitalName": "Shaheed Suhrawardy Medical College Hospital",
+    "degree": "M.B.B.S, DTCD(DU) MSC(JAPAN) FCCP",
+    "workingAddress": "House No: 37, Road No: 04, Dhanmondi R/A, Dhaka-1205.",
+    "visitTime": "2:00 pm - 6:30 pm",
+    "consultationFee": "400 TK",
+    "email": "mahbuhul@doctordesk.com",
+    "phone": 2845489,
+    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos itaque, dolore enim dolorum, harum voluptates et soluta quia voluptas labore placeat necessitatibus eum iure quaerat laudantium provident deserunt veniam ullam."
+}

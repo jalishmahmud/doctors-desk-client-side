@@ -1,11 +1,11 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { useEffect, useState } from "react";
 import initializeAuthentication from "../firebase/firebase.init";
 initializeAuthentication();
 const useFirebase = () => {
     const [user, setUser] = useState({});
 
-    const [userName, setUserName] = useState('');
+    // const [userName, setUserName] = useState('');
     const [userEmail, setUserEmail] = useState('');
     const [userPassword, setUserPassword] = useState('');
     const [error, setError] = useState('');
@@ -14,10 +14,10 @@ const useFirebase = () => {
     const auth = getAuth();
     const googelProvider = new GoogleAuthProvider();
 
-    const getUserName = e => {
-        const userName = e.target.value;
-        setUserName(userName);
-    }
+    // const getUserName = e => {
+    //     const userName = e.target.value;
+    //     setUserName(userName);
+    // }
     const getUserEmail = e => {
         const userEmail = e.target.value;
         setUserEmail(userEmail);
@@ -32,38 +32,34 @@ const useFirebase = () => {
         setIsChecked(checked);
     }
 
-
-
     const registerUsingEmailPassword = e => {
         e.preventDefault();
-        if (userPassword < 6) {
+        if (userPassword.length < 6) {
             setError('Password must be at least 6 characters');
             return;
         }
         if (/(?=.*[0-9].*[0-9])/.test(userPassword) === true) {
-            console.log(userName, userEmail, userPassword);
+            console.log(userEmail, userPassword);
 
             createUserWithEmailAndPassword(auth, userEmail, userPassword)
                 .then(result => {
                     setUser(result.user)
                 })
             setError('');
-            updateUserName();
+            // updateUserName();
             console.log(user);
         }
         else {
             setError('Password should be minimum two digit')
         }
     }
-    const updateUserName = () => {
-        updateProfile(auth.currentUser, {
-            displayName: userName
-        })
-            .then(result => { })
-            .catch(error => {
-                setError(error.message)
-            })
-    }
+    // const updateUserName = () => {
+    //     updateProfile(auth.currentUser, { displayName: userName })
+    //         .then(result => { })
+    //         .catch(error => {
+    //             setError(error.message)
+    //         })
+    // }
     const signInUsingEmailPassword = e => {
         e.preventDefault();
 
@@ -86,11 +82,8 @@ const useFirebase = () => {
     }
 
     const signInUsingGoogle = () => {
-        signInWithPopup(auth, googelProvider)
-            .then(result => {
-                setUser(result.user)
-                console.log(result.user);
-            })
+        return signInWithPopup(auth, googelProvider)
+
     }
 
     const logOut = () => {
@@ -111,7 +104,6 @@ const useFirebase = () => {
         user,
         error,
         isChecked,
-        getUserName,
         getUserEmail,
         getUserPassword,
         handleSignInSignUpToggle,

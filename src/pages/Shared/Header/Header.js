@@ -9,12 +9,13 @@ const Header = () => {
     const { user, logOut } = useAuth();
     return (
         <>
-            <Navbar bg="light" variant="light">
+            <Navbar bg="light" variant="light" collapseOnSelect expand="lg" >
                 <Container>
-                    <Navbar.Brand href="#home"><img src={logo} alt="" /></Navbar.Brand>
+                    <Navbar.Brand as={Link} to="/home"><img src={logo} alt="" /></Navbar.Brand>
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end">
                         <Nav.Link as={Link} to="/home">Home</Nav.Link>
+                        <Nav.Link as={Link} to="/appointment">Appointment</Nav.Link>
                         <Nav.Link as={Link} to="/about">About</Nav.Link>
                         <Nav.Link as={Link} to="/services">Services</Nav.Link>
                         <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
@@ -25,7 +26,7 @@ const Header = () => {
                         }
                         <Navbar.Text>
                             {user.email &&
-                                <span> <b>Welcome : </b> {user.displayName}  <img className="user-photo" src={user.photoURL} alt="" /></span>
+                                <span> <b>Welcome ! </b> {user.displayName}  <img className="user-photo" src={user.photoURL} alt="" /></span>
 
                             }
                         </Navbar.Text>

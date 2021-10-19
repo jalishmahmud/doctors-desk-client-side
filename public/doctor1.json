@@ -1,0 +1,14 @@
+{
+    "id": 1,
+    "name": "Prof. Mohammed Hanif",
+    "img": "https://i.ibb.co/7S1crbk/doctor-1-1.jpg",
+    "designation": "Professor, Neurologist",
+    "hospitalName": "Dhaka Shishu Hospital (DSH)",
+    "degree": "M.B.B.S, F.C.P.S, F.R.CP (Edin)",
+    "workingAddress": "Dhaka Shishu Hospital, Shishu mela, Sher-e Bangla Nagar, DHaka.",
+    "visitTime": "2:00 pm - 6:30 pm",
+    "consultationFee": "500 TK",
+    "email": "hanif@doctordesk.com",
+    "phone": 2896453,
+    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos itaque, dolore enim dolorum, harum voluptates et soluta quia voluptas labore placeat necessitatibus eum iure quaerat laudantium provident deserunt veniam ullam."
+}

@@ -1,0 +1,14 @@
+{
+    "id": 3,
+    "name": "Dr. Golam Muin Uddin",
+    "img": "https://i.ibb.co/R9Qc9Ch/doctor-3-1.jpg",
+    "designation": "Professor, Paediatrics",
+    "hospitalName": "Bangabandhu Sheikh Mujib Medical University",
+    "degree": "MBBS, FCPS,FRCP",
+    "workingAddress": "Dhaka Shishu Hospital, Shishu mela, Sher-e Bangla Nagar, DHaka.",
+    "visitTime": "2:00 pm - 6:30 pm",
+    "consultationFee": "600 TK",
+    "email": "muin@doctordesk.com",
+    "phone": 2896345,
+    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos itaque, dolore enim dolorum, harum voluptates et soluta quia voluptas labore placeat necessitatibus eum iure quaerat laudantium provident deserunt veniam ullam."
+}
