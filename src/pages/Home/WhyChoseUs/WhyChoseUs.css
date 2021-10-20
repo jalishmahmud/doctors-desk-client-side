@@ -1,5 +1,17 @@
 .single-why-chose-us{
     font-family: 'Merriweather', serif;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+
+}
+.single-why-chose-us:hover{
+    background-color: rgb(241, 241, 241);
+    
+}
+.single-why-chose-us:hover .custom-icon{
+    color: #f4f7fc;
+    background-color: #DC3545;
+    
 }
 .single-why-chose-us h3 {
 color: #232323;
@@ -29,6 +41,7 @@ text-decoration: none;
     font-size: 30px;
     background-color: #f4f7fc;
     color: #DC3545;
-    padding: 20px 24px;
+    padding: 20px 27px;
     border-radius: 100%;
+    transition: all 0.3s ease-in-out;
 }

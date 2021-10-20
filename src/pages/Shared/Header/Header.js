@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import logo from '../../../images/logo.png';
 import profilePict from '../../../images/profilePict.png';
 import useAuth from '../../../hooks/useAuth'
@@ -15,8 +16,8 @@ const Header = () => {
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end">
                         <Nav.Link as={Link} to="/home">Home</Nav.Link>
+                        <Nav.Link as={HashLink} to="/home#doctors">Doctors</Nav.Link>
                         <Nav.Link as={Link} to="/appointment">Appointment</Nav.Link>
-                        <Nav.Link as={Link} to="/about">About</Nav.Link>
                         <Nav.Link as={Link} to="/services">Services</Nav.Link>
                         <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
                         {!user?.email ?
@@ -26,7 +27,14 @@ const Header = () => {
                         }
                         <Navbar.Text>
                             {user.email &&
-                                <span> <b>Welcome ! </b> {user.displayName}  <img className="user-photo" src={user.photoURL} alt="" /></span>
+                                <span> <b>Welcome ! </b> {user.displayName ?
+                                    user.displayName
+                                    :
+                                    user.email}  <img className="user-photo" src={user.photoURL
+                                        ?
+                                        user.photoURL
+                                        :
+                                        profilePict} alt="" /></span>
 
                             }
                         </Navbar.Text>

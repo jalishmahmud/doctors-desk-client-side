@@ -1,5 +1,15 @@
 import React from 'react';
 import { Button, Col, Container, FloatingLabel, Form, Row } from 'react-bootstrap';
+import './Contact.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { faMobileAlt } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+
+
+const map = <FontAwesomeIcon icon={faMapMarkerAlt} />
+const mobile = <FontAwesomeIcon icon={faMobileAlt} />
+const envelope = <FontAwesomeIcon icon={faEnvelope} />
 
 const Contact = () => {
     return (
@@ -8,10 +18,10 @@ const Contact = () => {
                 <Row className="my-5 contact-us">
                     <Col xs={12} md={6}>
                         <h3>Meet With Us</h3>
-                        <div>
-                            <p>Address: 121 Wallstreet Street, NY York , USA</p>
-                            <p>Phone: +800 1234 45 67</p>
-                            <p>Email: info@doctorsdesk.com</p>
+                        <div >
+                            <p><span className="me-2">{map}</span> 121 Wallstreet Street, NY York , USA</p>
+                            <p><span className="me-2">{mobile}</span> +800 1234 45 67</p>
+                            <p><span className="me-2">{envelope}</span> info@doctorsdesk.com</p>
                         </div>
                     </Col>
                     <Col xs={12} md={6}>
@@ -33,7 +43,7 @@ const Contact = () => {
                                     style={{ height: '100px' }}
                                 />
                             </FloatingLabel>
-                            <Button className="mt-3" variant="danger" type="submit">
+                            <Button onClick={e => e.preventDefault()} className="mt-3" variant="danger" type="submit">
                                 Submit
                             </Button>
                         </Form>

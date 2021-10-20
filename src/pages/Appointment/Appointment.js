@@ -2,6 +2,9 @@ import React from 'react';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import appointmentImg from '../../images/appointment.png';
 const Appointment = () => {
+    const handleConfirmButton = e => {
+        e.preventDefault();
+    };
     return (
         <div>
             <Container>
@@ -48,7 +51,7 @@ const Appointment = () => {
                                     <Form.Control type="text" placeholder="Sign" />
                                 </Form.Group>
                             </Row>
-                            <Button className="mt-3" variant="danger" type="submit">
+                            <Button onClick={handleConfirmButton} className="mt-3" variant="danger" type="submit">
                                 Confirm
                             </Button>
                         </Form>

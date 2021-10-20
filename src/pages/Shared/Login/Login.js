@@ -9,6 +9,7 @@ const Login = () => {
         signInUsingGoogle,
         error,
         isChecked,
+        setIsLoading,
         getUserEmail,
         getUserPassword,
         registerUsingEmailPassword,
@@ -20,11 +21,16 @@ const Login = () => {
     const history = useHistory();
     const redirect_uri = location.state?.from || '/appointment';
     const handleGoogleSignIn = () => {
+        setIsLoading(true);
         signInUsingGoogle()
             .then(result => {
                 history.push(redirect_uri)
-            });
+            })
+            .finally(() => {
+                setIsLoading(false)
+            })
     };
+
     return (
         <div>
             <Container>

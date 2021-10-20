@@ -2,6 +2,7 @@ import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import servicePageImg from '../../images/servicePageImg.png';
 import WhyChoseUs from '../Home/WhyChoseUs/WhyChoseUs';
+import About from '../About/About';
 const Services = () => {
     return (
         <div>
@@ -16,11 +17,12 @@ const Services = () => {
                         <p>We provide the most full medical services, so every person could have the opportunity to receive qualitative medical help.</p>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga exercitationem dolores in dolorum ducimus recusandae modi vel libero facere a. Dignissimos sed minus dicta eaque veritatis nisi, tempore iure odio sunt itaque sint molestias voluptatum illo ducimus obcaecati velit, voluptatibus labore quas doloremque quae reiciendis corporis iste? Laudantium, ullam minus!</p>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga exercitationem dolores in dolorum ducimus recusandae modi vel libero facere a. Dignissimos sed minus dicta eaque veritatis nisi, tempore iure odio sunt itaque sint molestias voluptatum illo ducimus obcaecati velit, voluptatibus labore quas doloremque quae reiciendis corporis iste? Laudantium, ullam minus!</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga exercitationem dolores in dolorum ducimus recusandae modi</p>
                     </Col>
                 </Row>
             </Container>
+            <About></About>
             <WhyChoseUs></WhyChoseUs>
+            <div className="mb-5 pb-5"></div>
         </div>
     );
 };

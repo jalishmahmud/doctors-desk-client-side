@@ -20,7 +20,7 @@ const ContactUs = () => {
                                     </InputGroup>
                                 </Col>
                                 <Col xs="auto" className="my-1">
-                                    <Button variant="danger" type="submit">Subscribe</Button>
+                                    <Button onClick={e => e.preventDefault()} variant="danger" type="submit">Subscribe</Button>
                                 </Col>
                             </Row>
                         </Form>
@@ -45,7 +45,7 @@ const ContactUs = () => {
                                 style={{ height: '100px' }}
                             />
                         </FloatingLabel>
-                        <Button className="mt-3" variant="danger" type="submit">
+                        <Button onClick={e => e.preventDefault()} className="mt-3" variant="danger" type="submit">
                             Submit
                         </Button>
                     </Form>

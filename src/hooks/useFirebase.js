@@ -9,7 +9,9 @@ const useFirebase = () => {
     const [userEmail, setUserEmail] = useState('');
     const [userPassword, setUserPassword] = useState('');
     const [error, setError] = useState('');
+    const [isLoading, setIsLoading] = useState(true);
     const [isChecked, setIsChecked] = useState(false);
+
 
     const auth = getAuth();
     const googelProvider = new GoogleAuthProvider();
@@ -33,6 +35,7 @@ const useFirebase = () => {
     }
 
     const registerUsingEmailPassword = e => {
+        setIsLoading(true)
         e.preventDefault();
         if (userPassword.length < 6) {
             setError('Password must be at least 6 characters');
@@ -45,9 +48,10 @@ const useFirebase = () => {
                 .then(result => {
                     setUser(result.user)
                 })
+                .finally(() => {
+                    setIsLoading(false);
+                })
             setError('');
-            // updateUserName();
-            console.log(user);
         }
         else {
             setError('Password should be minimum two digit')
@@ -61,20 +65,23 @@ const useFirebase = () => {
     //         })
     // }
     const signInUsingEmailPassword = e => {
+        setIsLoading(true);
         e.preventDefault();
 
         if (/(?=.*[0-9].*[0-9])/.test(userPassword) === true) {
             console.log(userEmail, userPassword);
 
-            signInWithEmailAndPassword(auth, userEmail, userPassword)
+            return signInWithEmailAndPassword(auth, userEmail, userPassword)
                 .then(result => {
                     setUser(result.user)
                 })
                 .catch((error) => {
                     setError(error.message)
                 })
-
-            setError('');
+                .finally(() => {
+                    setIsLoading(false);
+                });
+            setError('')
         }
         else {
             setError('Password should be minimum two digit')
@@ -95,7 +102,10 @@ const useFirebase = () => {
         const unsubscribed = onAuthStateChanged(auth, user => {
             if (user) {
                 setUser(user);
+            } else {
+                setUser({})
             }
+            setIsLoading(false)
         })
         return unsubscribed;
     }, []);
@@ -104,6 +114,8 @@ const useFirebase = () => {
         user,
         error,
         isChecked,
+        isLoading,
+        setIsLoading,
         getUserEmail,
         getUserPassword,
         handleSignInSignUpToggle,

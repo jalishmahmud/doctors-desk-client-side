@@ -1,7 +1,20 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import footerLogo from '../../../images/logo.png';
 import './Footer.css';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { faMobileAlt } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+
+
+const map = <FontAwesomeIcon icon={faMapMarkerAlt} />
+const mobile = <FontAwesomeIcon icon={faMobileAlt} />
+const envelope = <FontAwesomeIcon icon={faEnvelope} />
+
+
 const Footer = () => {
     return (
         <div className="mb-2 footer pt-5">
@@ -10,7 +23,8 @@ const Footer = () => {
                     <Col xs={12} sm={6} md={3} lg={3} >
                         <div>
                             <h3>About us</h3>
-                            <p>Choosing the right hospital and physician are important factors to consider that significantly influence a patient’s treatment. The preferred choice for many patients is choosing private care.ss</p>
+                            <img className="mb-3" src={footerLogo} alt="" />
+                            <p>Choosing the right hospital and physician are important factors to consider that significantly influence a patient’s treatment. The preferred choice for many patients </p>
                         </div>
                     </Col>
                     <Col xs={12} sm={6} md={3} lg={3} >
@@ -26,7 +40,7 @@ const Footer = () => {
                             </ul>
                         </div>
                     </Col>
-                    <Col xs={12} sm={6} md={3} lg={3} >
+                    <Col xs={12} sm={6} md={2} lg={2} >
                         <div>
                             <h3>Links</h3>
                             <ul>
@@ -39,12 +53,12 @@ const Footer = () => {
                             </ul>
                         </div>
                     </Col>
-                    <Col xs={12} sm={6} md={3} lg={3} >
+                    <Col xs={12} sm={6} md={4} lg={4} >
                         <div>
                             <h3>Head office</h3>
-                            <p>121 Wallstreet Street, NY York , USA</p>
-                            <p>+800 1234 45 67</p>
-                            <p>info@doctorsdesk.com</p>
+                            <p><span>{map} </span> 121 Wallstreet Street, NY York , USA</p>
+                            <p> <span>{mobile} </span> +800 1234 45 67</p>
+                            <p> <span>{envelope} </span> info@doctorsdesk.com</p>
                         </div>
                     </Col>
                 </Row>

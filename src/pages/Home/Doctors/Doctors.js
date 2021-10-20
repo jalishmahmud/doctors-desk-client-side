@@ -10,10 +10,10 @@ const Doctors = () => {
             .then(data => setDoctors(data))
     }, []);
     return (
-        <div className="single-doctor text-center mt-5">
+        <div id="doctors" className="single-doctor text-center mt-5">
             <div className="mb-5">
                 <h5 className="mb-3">MEDICAL SPECIALISTS</h5>
-                <h2>We have the best specialists of the country</h2>
+                <h2>We have the best doctors of the country</h2>
             </div>
 
             <Container>

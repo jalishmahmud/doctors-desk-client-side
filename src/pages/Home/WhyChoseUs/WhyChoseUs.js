@@ -16,7 +16,7 @@ const rightArrow = <FontAwesomeIcon icon={faArrowRight} />
 
 const WhyChoseUs = () => {
     return (
-        <div className="single-doctor text-center mt-5">
+        <div id="why-chose-us" className="single-doctor text-center mt-5">
             <div className="mb-5">
                 <h5 className="mb-3">24/7 SERVICE</h5>
                 <h2>Why Chose Us</h2>
