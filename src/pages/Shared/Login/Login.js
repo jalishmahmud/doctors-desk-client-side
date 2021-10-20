@@ -5,6 +5,7 @@ import { useHistory, useLocation } from 'react-router';
 
 
 const Login = () => {
+    // distructure from useAuth
     const {
         signInUsingGoogle,
         error,
@@ -17,6 +18,7 @@ const Login = () => {
         handleSignInSignUpToggle
     } = useAuth();
 
+    // redirect to specific page after login
     const location = useLocation();
     const history = useHistory();
     const redirect_uri = location.state?.from || '/appointment';
@@ -69,10 +71,6 @@ const Login = () => {
                     <Col xs={1}></Col>
                 </Row>
             </Container>
-
-
-
-
         </div>
     );
 };
